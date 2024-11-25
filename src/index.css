@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: iransans;
+  src: url("./assets/font/IRANSansXFaNum-Medium.ttf") format("opentype");
+}
+@layer base {
+  body {
+    @apply font-iransans;
+    @apply bg-dark-200;
+  }
+  input {
+    @apply border-none;
+    @apply outline-none;
+  }
+}
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    @apply rounded-[100vh];
+    @apply bg-transparent;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-dark-200;
+    @apply rounded-[100vh];
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-400;
+  }
+}
